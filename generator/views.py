@@ -5,10 +5,10 @@ import random
 
 # Create your views here.
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'generator/about.html')
 
 def home(request): 
-    return render(request, "home.html")  
+    return render(request, "generator/home.html")  
 
 def password(request):
 
@@ -26,5 +26,5 @@ def password(request):
     for char in range(length):
         generated_password += random.choice(characters)
 
-    return render(request, "password.html", {"password": generated_password})    
+    return render(request, "generator/password.html", {"password": generated_password})    
 
